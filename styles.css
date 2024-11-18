@@ -1,0 +1,114 @@
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.container{
+    padding: 6vw;
+    border: 1px solid black;
+    box-shadow: 0px 0px 52px 0px rgba(166,31,166,1);
+    border-radius: 8px;
+    box-sizing: border-box;
+    max-width: 110vw;
+}
+
+.celdaX{
+    font-weight: 150px;
+    text-shadow: -2px -2px 10px blue,
+        2px 2px 10px blue,
+        0 0 20px blue,
+        0 0 40px blue,
+        0 0 60px blue,
+        0 0 80px blue,
+        0 0 100px blue;
+}
+
+.celdaO{
+    font-weight: 150px;
+    text-shadow: -2px -2px 10px rgba(166,31,166,1),
+        2px 2px 10px rgba(166,31,166,1),
+        0 0 20px rgba(166,31,166,1),
+        0 0 40px rgba(166,31,166,1),
+        0 0 60px rgba(166,31,166,1),
+        0 0 80px rgba(166,31,166,1),
+        0 0 100px rgba(166,31,166,1);
+}
+
+.celdaGanadora{
+   background-color: green;
+   color: white;
+}
+
+#game .cells{
+    width: 90px;
+    height: 90px;
+    font-size: 3rem;
+    display: grid;
+    place-items: center;
+    border: 1px solid blue;
+    float: left;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+#game{
+    width: 290px;
+    gap: 10px;
+    text-align: center;
+}
+
+#result{
+    position: relative;
+    top: 20px;
+    height: 2rem;
+}
+
+/*Mid-size*/
+@media (max-width: 768px){
+    .container{
+        padding: 6vw;
+        box-shadow: 0px 0px 20px 0px rgba(166, 31, 166, 1);
+    }
+
+    #game{
+        max-width: 500px;
+        gap: 4px;
+    }
+
+    #game .cells{
+        font-size: 2.5rem;
+    }
+
+    #result{
+        font-size: 1rem;
+    }
+}
+
+/*Small-size*/
+@media (max-width: 480px){
+    .container{
+        width: 80%;
+        padding: 4.5vw;
+    }
+
+    #game{
+        max-width: 400px;
+        gap: 2px;
+        margin: 0 auto;
+    }
+
+    #game .cells{
+        font-size: 2rem;
+    }
+
+    #result{
+        font-size: 0.8rem;
+    }
+}
